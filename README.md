@@ -9,8 +9,38 @@
 
 ## Features
 
-- 📦 **Packages**
-  - 🪄 [Lint](./packages/eslint-config-plants/README.md): Custom linting rules (Eslint, StandardJS)
+- **Applications**
+  - 🖥️ [Web](./apps/web/README.md): PWA mobile-optimized (Svelte, SvelteKit)
+- **Packages**
+  - 🪄 [Lint](./packages/eslint-config-custom/README.md): Custom linting rules (Eslint, StandardJS)
+- **Tools**
+  - 🗂️ Monorepo
+
+## Getting started
+
+- Create `.env` file
+- Create `docker-compose.override.yml`
+
+```yml
+version: '3.4'
+services:
+  web:
+    command: tail -f /dev/null
+```
+
+- Create and start containers
+
+```js
+docker-compose up -d
+```
+
+- Start shell inside applicative container
+
+```js
+docker-compose exec <web> sh
+```
+
+- Start application commands
 
 ## License
 
