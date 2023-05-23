@@ -1,0 +1,11 @@
+{
+  "name": "@hopflavour/monorepo",
+  "description": "Apps for beer lovers",
+  "author": "Aurélien Wolz <wolzaurelien@protonmail.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
