@@ -1,0 +1,10 @@
+# Apostrophe
+/data
+/locales
+
+# Build
+/apos-build
+/public/modules
+/public/uploads
+/public/apos-minified
+/public/apos-frontend

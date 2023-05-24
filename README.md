@@ -10,6 +10,7 @@
 ## Features
 
 - **Applications**
+  - 🗃️ [CMS](./apps/cms/README.md): CMS headless (ApostropheCMS)
   - 🖥️ [Web](./apps/web/README.md): PWA mobile-optimized (Svelte, SvelteKit)
 - **Packages**
   - 🪄 [Lint](./packages/eslint-config-custom/README.md): Custom linting rules (Eslint, StandardJS)

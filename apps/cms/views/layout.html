@@ -1,0 +1,38 @@
+{% extends data.outerLayout %}
+
+{% set title = data.piece.title or data.page.title %}
+{% block title %}
+  {{ title }}
+  {% if not title %}
+    {{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
+  {% endif %}
+{% endblock %}
+
+{% block extraHead %}
+  {# Live reload #}
+  {% if data.isDev %}
+    <link href="http://localhost:9002/wp/site.css" rel="stylesheet" />
+  {% endif %}
+{% endblock %}
+
+{% block beforeMain %}
+  <div class="container">
+{% endblock %}
+
+{% block main %}
+  {#
+    Page templates in the @apostrophecms/pages module will override this block.
+    This is where page-specific content will go.
+  #}
+{% endblock %}
+
+{% block afterMain %}
+  </div>
+{% endblock %}
+
+{% block afterAposScripts %}
+  {# Live reload #}
+  {% if data.isDev %}
+    <script src="http://localhost:9002/wp/site.js"></script>
+  {% endif %}
+{% endblock %}

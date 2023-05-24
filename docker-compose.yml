@@ -9,3 +9,20 @@ services:
       - "${WEB_PORT}:${WEB_PORT}"
     env_file:
       - .env
+  cms:
+    build:
+      context: .
+      dockerfile: ./apps/cms/Dockerfile
+    working_dir: /app/apps/cms
+    ports:
+      - "${CMS_PORT}:${CMS_PORT}"
+    env_file:
+      - .env
+  mongodb:
+    image: mongo:4.4.14
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodata:/data/db
+volumes:
+  mongodata:

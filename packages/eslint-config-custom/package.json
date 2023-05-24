@@ -1,6 +1,6 @@
 {
   "name": "@hopflavour/eslint-config-custom",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
     "eslint-plugin-svelte": "^2.26.0",
