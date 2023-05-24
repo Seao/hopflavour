@@ -1,28 +1,25 @@
 version: '3.4'
 services:
-  web:
+  root:
     build:
       context: .
-      dockerfile: ./apps/web/Dockerfile
-    working_dir: /app/apps/web
+      target: builder
     ports:
       - "${WEB_PORT}:${WEB_PORT}"
-    env_file:
-      - .env
-  cms:
-    build:
-      context: .
-      dockerfile: ./apps/cms/Dockerfile
-    working_dir: /app/apps/cms
-    ports:
       - "${CMS_PORT}:${CMS_PORT}"
     env_file:
       - .env
+    volumes:
+      - .:/app
+      - ./node_modules:/app/node_modules
+      - ./apps/cms/node_modules:/app/apps/cms/node_modules
+      - ./apps/web/node_modules:/app/apps/web/node_modules
   mongodb:
     image: mongo:4.4.14
     ports:
       - 27017:27017
     volumes:
       - mongodata:/data/db
+
 volumes:
   mongodata:

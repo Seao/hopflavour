@@ -1,17 +1,16 @@
 {
   "name": "@hopflavour/web",
-  "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite dev --host",
     "build": "vite build",
     "preview": "vite preview",
-    "test:unit": "vitest",
+    "test": "vitest",
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@hopflavour/eslint-config-custom": "^1.0.0",
+    "@hopflavour/eslint-config-custom": "*",
     "@sveltejs/adapter-node": "^1.2.4",
     "@sveltejs/kit": "^1.5.0",
     "eslint": "^8.41.0",

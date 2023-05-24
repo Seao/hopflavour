@@ -3,7 +3,7 @@ module.exports = {
     types: [
       {
         label: 'Home',
-        name: '@apostrophecms/home-page',
+        name: '@apostrophecms/home-page'
       }
     ]
   }

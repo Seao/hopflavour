@@ -25,7 +25,7 @@
 ```yml
 version: '3.4'
 services:
-  web:
+  root:
     command: tail -f /dev/null
 ```
 
@@ -38,10 +38,14 @@ docker-compose up -d
 - Start shell inside applicative container
 
 ```js
-docker-compose exec <web> sh
+docker-compose exec root sh
 ```
 
 - Start application commands
+
+```js
+npm run -w @hopflavour/<app> <command>
+```
 
 ## License
 
